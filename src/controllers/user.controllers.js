@@ -84,8 +84,8 @@ const updateAvatar = asyncHandler(async (req, res) => {
 });
 
 const updateCoverImage = asyncHandler(async (req, res) => {
-  const coverLocalPath = req.file;
-  if (coverLocalPath) {
+  const coverLocalPath = req.file?.path;
+  if (!coverLocalPath) {
     throw new ApiError(400, "Cover Image is required");
   }
 

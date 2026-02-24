@@ -46,7 +46,7 @@ router
   .patch(verifyJWT, upload.single("avatar"), updateAvatar);
 
 router
-  .route("/cover-image")
+  .route("/update-cover")
   .patch(verifyJWT, upload.single("coverImage"), updateCoverImage);
 
 router.route("/refresh-token").post(refreshAccessToken);
