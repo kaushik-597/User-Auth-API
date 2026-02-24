@@ -33,7 +33,7 @@ const generateTokens = async (userId) => {
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
-  console.log(req.body);
+  // console.log(req.body);
 
   //validation
   if (!email) throw new ApiError(400, "Email is required !!");
